@@ -12,28 +12,3 @@ enum Role {
   USER
   ADMIN
 }
-
-model user {
-  id       Int      @id @default(autoincrement())
-  status   Boolean  @default(true)
-  age      Int
-  createAt DateTime @default(now())
-  updateAt DateTime @default(now()) @updatedAt
-  row      Role     @default(USER)
-  name     String
-  email    String   @unique
-  posts    post[]
-
-  @@map("users")
-}
-
-model post {
-  id       Int     @id @default(autoincrement())
-  title    String
-  subTitle String? 
-  body     String
-  userId   Int
-  author   user    @relation(fields: [userId], references: [id])
-
-  @@map("posts")
-}
