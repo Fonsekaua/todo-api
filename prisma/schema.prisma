@@ -27,7 +27,7 @@ model User {
 
 model Post {
   id       Int     @id @default(autoincrement())
-  title    String
+  title    String 
   subtitle String?
   body     String
   userId   Int
