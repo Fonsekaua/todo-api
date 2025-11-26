@@ -6,4 +6,5 @@
 ## Como rodar: 
 ### instale as dependencias com: 
 `npm install`
-
+### rode o servidor com: 
+`npm run dev`
